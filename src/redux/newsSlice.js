@@ -27,7 +27,7 @@ export const fetchNews = createAsyncThunk(
 const newsSlice = createSlice({
   name: 'news',
   initialState: {
-    articles: [],
+    articles: {},
     totalResults: 0,
     loading: false,
     error: null,
@@ -59,7 +59,7 @@ const newsSlice = createSlice({
       })
       .addCase(fetchNews.fulfilled, (state, action) => {
         state.loading = false;
-        state.articles = [...state.articles, ...action.payload.articles];
+        state.articles = {...state.articles, [action.payload.page] : action.payload.articles};
         state.totalResults = action.payload.totalResults;
         state.page = action.payload.page; // Update the current page in state
       })
