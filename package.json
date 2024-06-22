@@ -2,7 +2,6 @@
   "name": "react-news-portal",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://janvi0116.github.io/news-portal/",
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.5",
     "@testing-library/jest-dom": "^5.17.0",
