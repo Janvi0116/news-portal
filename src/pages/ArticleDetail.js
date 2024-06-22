@@ -4,8 +4,9 @@ import { useSelector } from 'react-redux';
 
 const ArticleDetail = () => {
   const { articleId } = useParams();
-  const articles = useSelector((state) => state.news.articles);
-  const article = articles.find((article) => article.title === articleId); // Assuming title is unique or use a unique identifier
+  const { articles,page } = useSelector((state) => state.news);
+  const articlesToFindFrom = articles[page] || [];
+  const article = articlesToFindFrom.find((article) => article.title === articleId); // Assuming title is unique or use a unique identifier
   const navigate = useNavigate();
   
   // Redirect to homepage if article is not found which would always be the case if the person

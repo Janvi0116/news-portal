@@ -37,7 +37,7 @@ const newsSlice = createSlice({
   },
   reducers: {
     resetArticles(state) {
-      state.articles = [];
+      state.articles = {};
       state.page = 1;
       state.totalResults = 0;
       state.loading = false;
