@@ -19,7 +19,7 @@ const ArticleDetail = () => {
 
   const { title, description, author, publishedAt, urlToImage, url, content } = article || {};
 
-  // content was always ending with something like "+ [6373] charas" . This is done to remove that
+  // content was always ending with something like "+ [6373] chars" . This is done to remove that
   const cleanContent = content ? content.replace(/\[\+\d+ chars\]/, '') : "";
 
   return (
