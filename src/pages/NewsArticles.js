@@ -26,11 +26,7 @@ const NewsArticles = () => {
   };
 
   let articlesToRender = articles[page] || [];
-  // if (articles.length > 10) {
-  //   const startIndex = (page - 1) * 10;
-  //   const endIndex = startIndex + 10;
-  //   articlesToRender = articles.slice(startIndex, endIndex);
-  // }
+  
 
   return (
     <div className="container mx-auto p-4">
